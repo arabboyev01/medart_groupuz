@@ -1,0 +1,52 @@
+@import "../../../assets/variables/colors";
+
+.contacts {
+  &__map {
+    margin-top: -7%;
+    margin-bottom: 100px;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px 15px;
+    font-family: 'Work Sans';
+    margin-bottom: 100px;
+
+
+    .info {
+      max-width: 304px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      &__icon {
+        margin-bottom: 42px;
+      }
+
+      &__type {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 20px;
+      }
+
+      &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 20px;
+      }
+
+      &__url {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        color: #3585F9;
+      }
+    }
+  }
+}

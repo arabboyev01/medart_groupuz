@@ -1,0 +1,50 @@
+@import '../../../assets/variables/colors';
+
+.header {
+  max-width: 100%;
+  min-width: 375px;
+  max-height: 900px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  .image {
+    width: 100vw;
+  }
+
+  .carousel {
+    .main {
+      width: 540px;
+      text-align: left;
+      padding: 20% 0 10%;
+
+      .subtitle {
+        font-size: calc(12px + 6 * (100vw / 1240));
+        color: $light;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-family: 'Yeseva One', cursive;
+        color: $light;
+        font-size: calc(20px + 24 * (100vw / 1240));
+        margin-bottom: 32px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+
+        hr {
+          width: 20%;
+          border: 2px solid $light;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

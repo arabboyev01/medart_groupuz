@@ -1,0 +1,16 @@
+@import '../../../../assets/variables/colors';
+.readmore{
+  text-transform: capitalize;
+  max-width: 225px;
+  max-height: 45px;
+  padding: 13px 26px;
+  background-color: $darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 5px;
+  border-radius: 50px;
+  span{
+    color: $light;
+  }
+}

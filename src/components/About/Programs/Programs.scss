@@ -1,0 +1,108 @@
+.programs {
+  background: url(../../../assets/images/aboutsecondImg.png) center center/cover no-repeat;
+  max-width: 100%;
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1040px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 158px 0;
+    margin-bottom: 50px;
+    @media (max-width: 570px) {
+      padding: 75px 0;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: calc(24px + 8 * (50vw / 1240));
+      color: #FFFFFF;
+      margin-bottom: 35px;
+      @media (max-width: 970px) {
+        font-size: calc(24px + (8 + 8 * .7) *  ((50vw - 375px) / 1240));
+        margin-bottom: 20px;
+      }
+    }
+
+    .descr {
+      font-weight: 400;
+      font-size: calc(17px + 7 * (50vw / 1240));
+      color: #FFFFFF;
+      margin-bottom: 50px;
+      @media (max-width: 970px) {
+        font-size: calc(17px + (7 + 7 * .7) *  ((50vw - 375px) / 1240));
+        margin-bottom: 25px;
+      }
+    }
+
+    .programwrap {
+      max-width: 665px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      row-gap: 35px;
+      margin-bottom: 70px;
+      @media (max-width: 970px) {
+        margin-bottom: 35px;
+        row-gap: 15px;
+      }
+
+      .program {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 30px;
+        @media (max-width: 570px) {
+          border: none;
+          justify-content: flex-start;
+          align-items: center;
+          column-gap: 10px;
+        }
+
+        .intwrap {
+          width: 70px ;
+          height: 70px;
+          border: 1px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media (max-width: 570px) {
+            border: none;
+          }
+          .int {
+            font-size: calc(24px + 12 * (50vw / 1240));
+            @media (max-width: 970px) {
+              font-size: calc(24px + (12 + 12 * .7) *  ((50vw - 375px) / 1240));
+            }
+            color: white;
+            font-weight: 500;
+          }
+        }
+
+        &__descr {
+          font-weight: 500;
+          font-size: calc(18px + 10 * (50vw / 1240));
+          @media (max-width: 970px) {
+            font-size: calc(18px + (10 + 10 * .7) *  ((50vw - 375px) / 1240));
+          }
+          color: #FFFFFF;
+          text-align: left;
+        }
+      }
+    }
+
+
+    .last__descr {
+      font-weight: 400;
+      font-size: calc(17px + 7 * (50vw / 1240));
+      @media (max-width: 970px) {
+        font-size: calc(17px + (7 + 7 * .7) *  ((50vw - 375px) / 1240));
+      }
+      color: #FFFFFF;
+    }
+  }
+
+}

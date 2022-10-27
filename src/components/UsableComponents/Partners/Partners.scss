@@ -1,0 +1,63 @@
+@mixin white-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0) 100%);
+}
+$animationSpeed: 20s;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-275px * 7));
+  }
+}
+
+.partners {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  overflow: hidden;
+  .slider {
+    display: flex;
+    width: 100%;
+
+    &::before,
+    &::after {
+      @include white-gradient;
+      content: "";
+      height: 125px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+    &::before {
+      left: 0;
+      top: 0;
+    }
+    .slide-track {
+      animation: scroll $animationSpeed linear infinite;
+      display: flex;
+      width: calc(250px * 14);
+      justify-content: space-between !important;
+    }
+  }
+
+  .doctors__container {
+    overflow: hidden;
+    .doctors__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 200px;
+      overflow-x: auto;
+      margin-bottom: -20px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+    }
+  }
+}

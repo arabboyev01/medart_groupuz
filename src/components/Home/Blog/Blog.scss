@@ -1,0 +1,12 @@
+.blog{
+  width: 100%;
+  min-width: 375px;
+  margin-bottom: 100px;
+  .posts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+}

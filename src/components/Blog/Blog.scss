@@ -1,0 +1,31 @@
+.blog {
+
+  &__top {
+    margin-top: -7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    margin-bottom: 100px;
+    @media (max-width: 1210px) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__posts {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 60px;
+    margin-bottom: 100px;
+    @media (max-width: 1250px) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+}

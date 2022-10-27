@@ -1,0 +1,24 @@
+.questions {
+  margin: 0 auto;
+  max-width: 1317px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 21px;
+  flex-wrap: wrap;
+  .question__card:nth-child(3),
+  .question__card:nth-child(7),
+  .question__card:nth-child(11),
+  .question__card:nth-child(15){
+    margin-top: -110px;
+  }
+  @media (max-width: 920px) {
+    .question__card:nth-child(3),
+    .question__card:nth-child(7),
+    .question__card:nth-child(11),
+    .question__card:nth-child(15){
+      margin-top: 0;
+    }
+  }
+}

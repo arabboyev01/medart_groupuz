@@ -1,0 +1,51 @@
+@import '../../../../assets/variables/colors';
+
+
+.top__news {
+  max-width: 660px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 30px;
+
+  .image {
+    max-width: 660px;
+    max-height: 355px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: contain;
+  }
+
+  .infos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:10px;
+
+    .info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 5px;
+    }
+  }
+
+  .title {
+    font-size: 32px;
+    color: $darkblue;
+    font-family: 'Yeseva One', cursive;
+
+  }
+
+  .descr {
+    color: $black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}

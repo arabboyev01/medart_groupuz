@@ -1,0 +1,101 @@
+@import '../../../assets/variables/colors';
+
+.service {
+  width: 100%;
+  min-width: 375px;
+  padding: 30px 0;
+  margin-bottom: 60px;
+  background-color: $light;
+
+  .wrapper {
+    width: 100%;
+
+    .another{
+      text-align: center;
+      font-weight: 600;
+      font-size: calc(24px + 10 * (50vw / 1280));
+      line-height: 25px;
+      color: $lightblue;
+      margin-bottom: 50px;
+    }
+    .services {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px 20px;
+      flex-wrap: wrap;
+      @media (max-width: 1095px) {
+        justify-content: center;
+      }
+      @media (max-width: 735px) {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+      }
+
+      .item {
+        max-width: 342px;
+        min-width: 342px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 25px;
+        @media (max-width: 735px) {
+          &:first-child{
+            margin: 0 0 0 1560px;
+          }
+        }
+        @media (max-width: 650px) {
+          &:first-child{
+            margin: 0 0 0 1650px;
+          }
+        }
+        @media (max-width: 550px) {
+          &:first-child{
+            margin: 0 0 0 1735px;
+          }
+        }
+        @media (max-width: 450px) {
+          max-width: 300px;
+          min-width: 300px;
+          &:first-child {
+            margin: 0 0 0 1550px;
+          }
+        }
+
+        img {
+          max-width: 80px;
+          max-height: 70px;
+        }
+
+        .title {
+          font-size: 26px;
+          color: $dark;
+          font-weight: 500;
+        }
+
+        .descr {
+          font-size: 16px;
+          color: $black;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+
+        .link {
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: 500;
+          color: $darkblue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 10px;
+        }
+      }
+    }
+  }
+}

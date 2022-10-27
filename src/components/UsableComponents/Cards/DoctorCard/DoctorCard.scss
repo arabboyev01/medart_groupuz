@@ -1,0 +1,25 @@
+@import "../../../../assets/variables/colors";
+
+.doctor__card {
+  position: relative;
+  width: 350px;
+  max-height: 500px;
+
+  .image {
+    border-radius: 10px;
+  }
+
+  .fullname {
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+
+    span {
+      color: $darkblue;
+    }
+  }
+}

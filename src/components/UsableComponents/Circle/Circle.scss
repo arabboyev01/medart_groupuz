@@ -1,0 +1,127 @@
+.progress {
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position:relative
+}
+
+.right {
+  border: #3f85a3 solid 3px;
+  height: 50px;
+  width: 50px;
+  border-radius:50px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  transform: rotate(-45deg);
+  animation: rota2 1000ms linear;
+  -moz-animation: rota2 1000ms linear;
+  -o-animation: rota2 1000ms linear;
+  -webkit-animation: rota2 1000ms linear;
+}
+
+@keyframes rota2 {
+  from{ transform:rotate(-225deg);}
+  to { transform: rotate(-45deg);}
+}
+
+@-o-keyframes rota2 {
+  from{ transform:rotate(-225deg);}
+  to { transform: rotate(-45deg);}
+}
+
+@-moz-keyframes rota2 {
+  from{ transform:rotate(-225deg);}
+  to { transform: rotate(-45deg);}
+}
+@-webkit-keyframes rota2 {
+  from{ transform:rotate(-225deg);}
+  to { transform: rotate(-45deg);}
+}
+
+.left {
+  border: #3f85a3 solid 3px;
+  height: 50px;
+  width: 50px;
+  border-radius:50px;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  transform: rotate(315deg);
+  animation: rota 2000ms linear;
+  -o-animation: rota 2000ms linear;
+  -moz-animation: rota 2000ms linear;
+  -webkit-animation: rota 2000ms linear;
+}
+@keyframes rota {
+  from {transform: rotate(-45deg);}
+  to { transform: rotate(315deg);}
+}
+@-o-keyframes rota {
+  from {transform: rotate(-45deg);}
+  to { transform: rotate(315deg);}
+}
+@moz-keyframes rota {
+  from {transform: rotate(-45deg);}
+  to { transform: rotate(315deg);}
+}
+@-webkit-keyframes rota {
+  from {transform: rotate(-45deg);}
+  to { transform: rotate(315deg);}
+}
+
+.middle {
+  color: #0987bc;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 130px;
+  height: 130px;
+  left: 15px;
+  top: 15px;
+  border-radius: 150px;
+  position: relative;
+  z-index: 4;
+}
+
+.popover {
+  background: white;
+  width: 80px;
+  height: 162px;
+  position:absolute;
+  top: -3px;
+  left: -3px;
+  opacity:0;
+  z-index:2;
+  animation: popover 1000ms linear;
+  -moz-animation: popover 1000ms linear;
+  -o-animation: popover 1000ms linear;
+  -webkit-animation: popover 1000ms linear;
+}
+
+@keyframes popover {
+  0% {opacity: 1;}
+  99%{opacity:1;}
+  100% {opacity:0;}
+}
+
+@-o-keyframes popover {
+  0% {opacity: 1;}
+  99%{opacity:1;}
+  100% {opacity:0;}
+}
+
+@-moz-keyframes popover {
+  0% {opacity: 1;}
+  99%{opacity:1;}
+  100% {opacity:0;}
+}
+
+@-webkit-keyframes popover {
+  0% {opacity: 1;}
+  99%{opacity:1;}
+  100% {opacity:0;}
+}

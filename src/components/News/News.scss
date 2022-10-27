@@ -1,0 +1,46 @@
+@import "../../assets/variables/colors";
+
+.news {
+  &__top {
+    margin-top: -7%;
+    margin-bottom: 100px;
+  }
+
+  &__middle,&__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 35px;
+    margin-bottom: 100px;
+    @media (max-width: 425px) {
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    &-title {
+      color: $darkblue;
+    }
+
+    &-news {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 50px 36px;
+      @media (max-width: 425px) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+  }
+}

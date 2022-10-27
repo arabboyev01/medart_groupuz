@@ -1,0 +1,33 @@
+@import "../../../../assets/variables/colors";
+
+.card{
+  max-width: 280px;
+  &__header{
+    margin-bottom: 15px;
+    &-image{
+      border-radius: 8px;
+      width: 100%;
+      max-width: 279px;
+      max-height: 176px;
+      object-fit: cover;
+    }
+  }
+  &__body{
+    margin-bottom: 24px;
+    &-title{
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: $dark;
+    }
+  }
+  &__footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 5px;
+    font-size: 14px;
+    color: $black;
+    opacity: .5;
+  }
+}

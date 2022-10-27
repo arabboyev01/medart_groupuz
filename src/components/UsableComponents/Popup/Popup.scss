@@ -1,0 +1,101 @@
+@import '../../../assets/variables/colors';
+
+.succesOpen{
+  position: fixed !important; 
+  top: 13% !important;
+  right: 0 !important; 
+  z-index: 1000 !important;
+  width: 300px;
+  display: block !important;
+}
+.succesClose{
+  display: none !important;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 45;
+  background-color: $light;
+  max-width: 500px;
+  min-width: 375px;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+
+  &__logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $dark;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    margin-bottom: 8px;
+
+    span {
+      color: red;
+    }
+  }
+
+  &__descr {
+    color: $dark;
+    line-height: 19px;
+    margin-bottom: 35px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1px solid $border;
+    margin-bottom: 15px;
+  }
+
+  &__danger{
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1.3px solid darkred;
+    margin-bottom: 15px;
+  }
+  
+  &__btns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .btn {
+      cursor: pointer;
+      padding: 8px 10px;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+
+  .reject {
+    color: $black;
+    margin-right: 5px;
+  }
+
+  .dispatch {
+    background-color: $darkblue;
+    color: $light;
+  }
+}

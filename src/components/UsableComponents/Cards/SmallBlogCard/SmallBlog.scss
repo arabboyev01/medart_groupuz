@@ -1,0 +1,45 @@
+@import "../../../../assets/variables/colors";
+
+.smallblog {
+  max-width: 370px;
+
+  &__header {
+    margin-bottom: 26px;
+
+    &-image {
+      width: 100%;
+      max-width: 370px;
+      max-height: 224px;
+    }
+  }
+
+  &__body {
+    &-where {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: $dark;
+      margin-bottom: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 5px;
+    font-size: 14px;
+    color: $black;
+    opacity: .5;
+  }
+}

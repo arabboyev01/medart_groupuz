@@ -1,0 +1,46 @@
+@import "../../../../assets/variables/colors";
+
+.bigblog{
+  max-width: 570px;
+
+  &__header {
+    margin-bottom: 26px;
+
+    &-image {
+      width: 100%;
+      max-width: 570px;
+      max-height: 336px;
+    }
+  }
+
+  &__body {
+    &-where {
+      font-size: 20px;
+      margin-bottom: 19px;
+    }
+
+    &-title {
+      width: 90%;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 32px;
+      color: $dark;
+      margin-bottom: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 5px;
+    font-size: 16px;
+    color: $black;
+    opacity: .5;
+  }
+}

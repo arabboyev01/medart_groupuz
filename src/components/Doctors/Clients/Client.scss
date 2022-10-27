@@ -1,0 +1,78 @@
+@import "../../../assets/variables/colors";
+
+.client {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 25px;
+  background-color: $darkblue;
+  color: $light;
+  border-radius: 10px;
+  padding: 7% 10%;
+  line-height: calc(18px + 7 * (100vw / 1280));
+  font-size: calc(16px + 4 * (100vw / 1280));
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 100px;
+  @media (max-width: 970px) {
+    font-size: calc(16px + (4 + 4 * .7) *  ((100vw - 375px) / 1240));
+    row-gap: 15px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: calc(20px + 20 * (100vw / 1280));
+    @media (max-width: 970px) {
+      font-size: calc(20px + (20 + 20 * .7) *  ((100vw - 375px) / 1240));
+    }
+  }
+
+  &__subtitle {
+    font-size: calc(18px + 6 * (100vw / 1280));
+    color: $light;
+    @media (max-width: 970px) {
+      font-size: calc(18px + (6 + 6 * .7) *  ((100vw - 375px) / 1240));
+    }
+  }
+
+  hr {
+    width: 2px;
+    background-color: $light;
+    border: none;
+    height: 88px;
+    margin: 10px 0;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__counts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: calc(14px + 14 * (100vw / 1280));
+      @media (max-width: 970px) {
+        font-size: calc(14px + (14 + 14 * .7) *  ((100vw - 375px) / 1240));
+      }
+
+      span {
+        font-weight: 700;
+        font-size: calc(18px + 22 * (100vw / 1280));
+        @media (max-width: 970px) {
+          font-size: calc(18px + (22 + 22 * .7) *  ((100vw - 375px) / 1240));
+        }
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@import '../../../assets/variables/colors';
+
+.top__navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1212;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 13px 0;
+  box-shadow: $shadow;
+  min-width: 375px;
+  background-color: $light;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 20px;
+
+      .link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 10px;
+        @media (max-width: 850px) {
+          &:last-child {
+            display: none;
+          }
+        }
+        @media (max-width: 645px) {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+
+        .wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+          row-gap: 2px;
+          text-transform: uppercase;
+          font-size: 15px;
+          @media (max-width: 645px) {
+            font-weight: 400;
+            font-size: 14px;
+          }
+
+          .title {
+            color: $darkblue;
+            font-weight: 600;
+          }
+
+          .info {
+            color: $lightblue;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 20px;
+
+      .social {
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $lightblue;
+        @media (max-width: 645px) {
+          padding: 5px;
+        }
+        @media (max-width: 425px) {
+          display: none;
+        }
+      }
+
+      .language {
+        &__dropdown {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .lngBtn {
+            cursor: pointer;
+            padding: 4px 3px;
+            border: 2px solid $lightblue;
+            background-color: $lightblue;
+            opacity: .75;
+            color: $light;
+            font-size: 16px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
