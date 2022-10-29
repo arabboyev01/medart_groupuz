@@ -10,15 +10,16 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   max-height: 154px;
   .image {
-    max-width: 165px;
-    height: 100% !important;
+    flex: 0.3;
+    width: 165px;
+    height: 154px;
     border-radius: 5px 0 0 5px;
-    object-fit: cover;
+    //object-fit: cover;
   }
 
   .infos {
     padding: 10px 10px 10px 0;
-
+    flex: 0.7;
     .info {
       color: $darkblue;
       font-size: 16px;

@@ -19,13 +19,12 @@ function BlogSingle() {
 
     const ali = [{
         id: 1,
-        header_title_uz: `${t('contact')}`,
-        header_title_ru: `${t('contact')}`,
-        header_description_uz: `${t('contact_description')}`,
-        header_description_ru: `${t('contact_description')}`,
+        header_title_uz: `${t('singleBlogPage')}`,
+        header_title_ru: `${t('singleBlogPage')}`,
+        header_description_uz: `${t('singleBlogPageDescription')}`,
+        header_description_ru: `${t('singleBlogPageDescription')}`,
         header_image: photo,
     }]
-
 
     if (isLoading) return <Loader/>
     if (isError) return <Loader/>
@@ -48,22 +47,23 @@ function BlogSingle() {
                         </div>
                         : <img src={post.image} alt="" className='post__image'/>
                     }
-                    <p className='post__title'>{post.title_1_uz}</p>
-                    <p className='post__descr'>{post.description_1_uz}</p>
+                    <p className='post__title'>{lang === 'uz' ? post.title_1_uz :  post.title_1_ru}</p>
+                    <p className='post__descr'>{lang === 'uz' ? post.description_1_uz : post.description_1_ru}</p>
+                    <div className='post__post'>
+                        <Tilda/>
+                        <p className='post__post-text'>{lang === 'uz' ? post.description_4_uz : post.description_4_ru}</p>
+                    </div>
                     <div className='post__info'>
-                        <p className='post__info-title'>{post.title_2_ru}</p>
-                        <p className='post__info-descr'>{post.description_2_ru}</p>
+                        <p className='post__info-title'>{lang === 'uz' ? post.title_2_uz : post.title_2_ru}</p>
+                        <p className='post__info-descr'>{lang === 'uz' ? post.description_2_uz : post.description_2_ru}</p>
                         <ul className='post__info-list'>
                             <li className='list'>{lang === 'uz' ? first_uz : first_ru}</li>
                             <li className='list'>{lang === 'uz' ? second_uz : second_ru}</li>
                             <li className='list'>{lang === 'uz' ? third_uz : third_ru}</li>
                         </ul>
-                        <p className='post__info-seconddescr'>{post.description_3_ru}</p>
+                        <p className='post__info-seconddescr'>{lang === 'uz' ? post.description_3_uz : post.description_3_ru}</p>
                     </div>
-                    <div className='post__post'>
-                        <Tilda/>
-                        <p className='post__post-text'>{post.description_4_ru}</p>
-                    </div>
+
                 </div>
             ))}
         </Container>

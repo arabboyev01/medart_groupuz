@@ -86,4 +86,4 @@ function Service() {
     </section>)
 }
 
-export default Service
+export default Service;

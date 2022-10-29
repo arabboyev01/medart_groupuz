@@ -1,12 +1,13 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 import './LearnMore.btn.scss'
-import {NavLink} from "react-router-dom";
-function LeanMore({children,url}) {
+
+function LearnMore({url, children}) {
   return (
-    <NavLink to={url} className='learnmore' >
-        {children}
-    </NavLink>
+      <Link to={url}>
+        <button className="buttonMain">{children}</button>
+      </Link>
   )
 }
 
-export default LeanMore
+export default LearnMore;

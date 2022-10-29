@@ -30,6 +30,7 @@
       }
       @media (max-width: 735px) {
         flex-wrap: nowrap;
+        overflow-y: hidden;
         overflow-x: scroll;
       }
 

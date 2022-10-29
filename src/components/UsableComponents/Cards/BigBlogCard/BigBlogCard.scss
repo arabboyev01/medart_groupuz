@@ -2,14 +2,13 @@
 
 .bigblog{
   max-width: 570px;
-
   &__header {
     margin-bottom: 26px;
-
+    height: 400px !important;
     &-image {
       width: 100%;
-      max-width: 570px;
-      max-height: 336px;
+      height: 100% !important;
+      border-radius: 10px;
     }
   }
 

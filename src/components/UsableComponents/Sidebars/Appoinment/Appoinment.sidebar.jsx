@@ -103,11 +103,11 @@ function AppoinmentSidebar({order, setOrder}) {
                             </ul>
                         </div>
                     </div>
-                    <input className='worked__inputs-input' type="text" placeholder={'Enter your Name'}
+                    <input className='worked__inputs-input' type="text" placeholder={t('yourname')}
                            onChange={(e) => setName(e.target.value)}/>
-                    <input className='worked__inputs-input' type="email" placeholder={'Enter your Email'}
+                    <input className='worked__inputs-input' type="email" placeholder={t('youremail')}
                            onChange={(e) => setEmail(e.target.value)}/>
-                    <input className='worked__inputs-input' type="tel" placeholder={'Enter your Number'}
+                    <input className='worked__inputs-input' type="tel" placeholder={t("yourphone")}
                            onChange={(e) => setNumber(e.target.value)}/>
                     <input className='worked__inputs-input' type="date" onChange={(e) => setDate(e.target.value)}/>
                     <input className='worked__inputs-btn' type="submit" value={t('appoinment_submit')} onClick={(e) => {

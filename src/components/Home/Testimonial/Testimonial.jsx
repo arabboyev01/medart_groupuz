@@ -9,39 +9,7 @@ import Container from "../../UsableComponents/Container/Container";
 import Title from "../../UsableComponents/Title/Title";
 import {ReactComponent as Tilda} from "../../../assets/icons/Tilda.svg";
 import {useTranslation} from "react-i18next";
-
-const data = [
-    {
-        id: 1,
-        title:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
-        author: "John Doe",
-    },
-    {
-        id: 2,
-        title:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
-        author: "John Doe",
-    },
-    {
-        id: 3,
-        title:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
-        author: "John Doe",
-    },
-    {
-        id: 4,
-        title:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
-        author: "John Doe",
-    },
-    {
-        id: 5,
-        title:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Quisque placerat scelerisque felis vitae tortor augue. Velit nascetur Consequat faucibus porttitor enim et.",
-        author: "John Doe",
-    },
-];
+import {data} from "./data";
 
 function Testimonial() {
     const {t} = useTranslation()

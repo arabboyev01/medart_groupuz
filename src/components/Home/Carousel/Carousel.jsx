@@ -9,14 +9,14 @@ import Container from "../../UsableComponents/Container/Container";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import {useTranslation} from "react-i18next";
-import {NavLink} from "react-router-dom";
 
 function Carousel1() {
 
     const {t} = useTranslation();
 
-    return (<header className='header'>
-        <Carousel animationHandler={"fade"} swipeable={true} showArrows={false} showStatus={false} showThumbs={false}
+    return (
+        <header className='header'>
+        <Carousel animationHandler={"fade"} swipeable={true} showArrows={false} showStatus={false} showThumbs={true}
                   autoPlay
                   infiniteLoop={true}>
             <div className='carousel'>
@@ -26,7 +26,7 @@ function Carousel1() {
                             <p className='subtitle'>{t("care1")}</p>
                             <p className='title'>{t('carouseltitle1')}<br/> {t('carouseldescr1')}</p>
                             <div className='wrapper'>
-                                <LearnMoreBtn url={'/service'} children={t('service')}/>
+                                <LearnMoreBtn url={"/about"} children={t('about')} />
                                 <hr/>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ function Carousel1() {
                         <p className='subtitle'>{t("care1")}</p>
                         <p className='title'>{t('carouseltitle1')}<br/> {t('carouseldescr1')}</p>
                         <div className='wrapper'>
-                            <LearnMoreBtn url={'/service'} children={t('service')}/>
+                            <LearnMoreBtn url={'/services'} children={t('service')}/>
                             <hr/>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ function Carousel1() {
                         <p className='subtitle'>{t("care1")}</p>
                         <p className='title'>{t('carouseltitle1')}<br/> {t('carouseldescr1')}</p>
                         <div className='wrapper'>
-                            <LearnMoreBtn url={'/service'} children={t('service')}/>
+                            <LearnMoreBtn url={'/doctors'} children={t('doctors')}/>
                             <hr/>
                         </div>
                     </div>
@@ -63,14 +63,15 @@ function Carousel1() {
                         <p className='subtitle'>{t("care1")}</p>
                         <p className='title'>{t('carouseltitle1')}<br/> {t('carouseldescr1')}</p>
                         <div className='wrapper'>
-                            <LearnMoreBtn url={'/service'} children={t('service')}/>
+                            <LearnMoreBtn url={'/news'} children={t('news')}/>
                             <hr/>
                         </div>
                     </div>
                 </Container></div>
             </div>
         </Carousel>
-    </header>)
+    </header>
+    )
 }
 
-export default Carousel1
+export default Carousel1;

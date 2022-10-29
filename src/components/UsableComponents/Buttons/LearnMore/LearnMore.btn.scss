@@ -1,21 +1,21 @@
 @import "../../../../assets/variables/colors";
 
-.learnmore{
-  text-transform: capitalize;
-  padding: 13px 35px;
-  border-radius: 100px;
-  border: none;
-  background-image: linear-gradient(180deg, $lightblue 35%, $darkblue 100%);
-  color: $light;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  @media (max-width: 425px) {
-    padding: 8px 14px;
+  .buttonMain{
+    text-transform: capitalize;
+    padding: 13px 35px;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(180deg, $lightblue 35%, $darkblue 100%);
+    color: $light;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer !important;
+    @media (max-width: 425px) {
+        padding: 8px 14px;
 
+    }
+    &:active{
+        background-image: linear-gradient(to bottom, $darkblue 10%, $lightblue 80%)
+    }
   }
-  &:active{
-    background-image: linear-gradient(to bottom, $darkblue 10%, $lightblue 80%)
-  }
-}

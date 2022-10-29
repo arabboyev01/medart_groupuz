@@ -20,14 +20,15 @@
       &__title {
         font-weight: 600;
         font-size: 48px;
-        line-height: 32px;
+        line-height: 52px;
         color: $dark;
         margin-bottom: 70px;
         @media (max-width: 550px) {
           font-weight: 500;
           font-size: 32px;
-          line-height: 25px;
+          line-height: 36px;
           margin-bottom: 50px;
+          text-align: start !important;
         }
       }
 
@@ -36,9 +37,11 @@
         line-height: 27px;
         color: $black;
         margin-bottom: 35px;
+        text-align: start !important;
         @media (max-width: 550px) {
           line-height: 20px;
           margin-bottom: 25px;
+          text-align: start !important;
         }
       }
     }
@@ -63,6 +66,7 @@
         width: 80%;
         font-size: 20px;
         line-height: 32px;
+        text-align: start !important;
       }
     }
   }

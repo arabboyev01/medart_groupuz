@@ -16,9 +16,9 @@
   "contact": "контакты",
   "appoinment": "Записаться на прием",
   "contact_description": "Вы можете найти нас по этим адресам и телефонам",
-  "appoinment_title": "Sign up for an appointment",
-  "appoinment_descr": "It just takes a few minutes to sign up and get fast,\neasy access to care, 24/7. No need for your\ninsurance card yet",
-  "appoinment_submit": "make an appointment",
+  "appoinment_title": "Запишитесь на прием",
+  "appoinment_descr": "Регистрация быстрая и может занять несколько минут,\nПользуйтесь нашими услугами 24/7.",
+  "appoinment_submit": "записаться на прием",
   "Carousel": "carousel",
   "care1": "Смирение",
   "carouseltitle1": "Ваше здоровье",
@@ -47,6 +47,7 @@
   "popupHeader": "Получите ваше имя и номер для бесплатной консультации, ответственные лица свяжутся с вами в течение 3 минут.",
   "contactus": "Свяжитесь с нами",
   "yourname": "Ваше имя",
+  "youremail": "Ваш электронной почты",
   "yourphone": "Ваш номер телефона",
   "dispatch": "Отправлять",
   "reject": "Отклонять",
@@ -110,8 +111,8 @@
   "importantPage": "важные страницы",
   "contacts": "контакты",
   "servicehist": "Исторически сложилось так, что наркотики были обнаружены путем определения активного ингредиента традиционных средств или путем случайного открытия. Более поздние химические библиотеки синтетических малых молекул.",
-  "servicehisttype": "Аллерголог"
-
-
+  "servicehisttype": "Аллерголог",
+  "singleBlogPage": "О нашем блоге",
+  "singleBlogPageDescription" : "О нашем едином блоге"
 
 }

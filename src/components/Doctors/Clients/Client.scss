@@ -11,7 +11,6 @@
   color: $light;
   border-radius: 10px;
   padding: 7% 10%;
-  line-height: calc(18px + 7 * (100vw / 1280));
   font-size: calc(16px + 4 * (100vw / 1280));
   text-align: center;
   text-transform: capitalize;
@@ -19,6 +18,7 @@
   @media (max-width: 970px) {
     font-size: calc(16px + (4 + 4 * .7) *  ((100vw - 375px) / 1240));
     row-gap: 15px;
+    line-height: 45px;
   }
 
   &__title {

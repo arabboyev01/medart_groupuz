@@ -20,7 +20,7 @@
       }
     }
     &__image {
-      max-width: 970px;
+      max-width: 570px;
       width:100%;
       border-radius: 5px;
       margin-bottom: 45px;
@@ -28,8 +28,8 @@
 
     &__title {
       max-width: 570px;
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 28px;
+      line-height: 36px;
       color: $dark;
       margin-bottom: 25px;
     }
@@ -38,10 +38,12 @@
       max-width: 570px;
       line-height: 32px;
       margin-bottom: 58px;
+      text-align: start;
     }
 
     &__info {
       max-width: 570px;
+      text-align: start;
       &-title {
         font-weight: 700;
         font-size: 24px;
@@ -53,9 +55,9 @@
         display: inline-block;
         margin-bottom: 32px;
         list-style: none;
+        padding-left: 30px;
         .list{
           position: relative;
-          text-align: left;
           line-height: 32px;
           &::after{
             position: absolute;
@@ -73,6 +75,7 @@
       &-descr,&-seconddescr  {
         line-height: 32px;
         margin-bottom: 44px;
+        text-align: start;
       }
     }
 
@@ -96,6 +99,7 @@
         width: 80%;
         font-size: 20px;
         line-height: 32px;
+        text-align: start;
       }
     }
   }

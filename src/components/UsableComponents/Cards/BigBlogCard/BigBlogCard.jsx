@@ -5,7 +5,8 @@ import {NavLink} from "react-router-dom";
 function BigBlog({data}) {
     const lang = localStorage.getItem('i18nextLng')
 
-    return (<NavLink to={`/blog/${data.blog_id}`} className='bigblog'>
+    return (
+        <NavLink to={`/blog/${data.blog_id}`} className='bigblog'>
         <div className='bigblog__header'>
             <img src={data.image} alt="" className='bigblog__header-image'/>
         </div>

@@ -61,7 +61,7 @@
   "devDependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "node-sass": "^7.0.3",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "6"
   },
   "main": "index.js",
   "repository": {
