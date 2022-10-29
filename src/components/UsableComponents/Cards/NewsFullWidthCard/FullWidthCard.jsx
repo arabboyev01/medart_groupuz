@@ -8,12 +8,11 @@ function FullWidth({ data }) {
   return (
     <NavLink to={`/news/${data.news_id}`}>
       <div className="fullwidth">
-        <div
-          className="fullwidth__head"
-          style={{ backgroundImage: `url(${data.image})` }}
-        ></div>
+        <div className="fullwidth__head" style={{ backgroundImage: `url(${data.image})` }}
+        >
+        </div>
         <div className="fullwidth__body">
-          <p className="fullwidth__head-title">
+          <p className="fullwidth__body-maintitle">
             {lang === "uz" ? data.title_uz : data.title_ru}
           </p>
           <p className="fullwidth__body-title">
