@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import {LanguageContext} from "../../../../context/langContext";
 import './BigBlogCard.scss'
 import {NavLink} from "react-router-dom";
 
 function BigBlog({data}) {
-    const lang = localStorage.getItem('i18nextLng')
+    // const lang = localStorage.getItem('i18nextLng')
 
+    const lang = useContext(LanguageContext);
     return (
         <NavLink to={`/blog/${data.blog_id}`} className='bigblog'>
         <div className='bigblog__header'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import SectionHeaders from "../UsableComponents/SectionHeaders/SectionHeader";
 import Photo from "../../assets/images/docsHeader.png";
 import Container from "../UsableComponents/Container/Container";
@@ -8,12 +8,13 @@ import {NavLink, useParams} from "react-router-dom";
 import {useGetSingleQuery} from "../../redux";
 import Loader from "../UsableComponents/Loader/Loader";
 import {useTranslation} from "react-i18next";
+import {LanguageContext} from "../../context/langContext";
 
 function AboutDoctor() {
     const id = useParams()
     const {data = [], isLoading, isError} = useGetSingleQuery(`/doctors/single/${id.id}`)
     const {t} = useTranslation()
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     if (isError) return <Loader/>
     if (isLoading) return <Loader/>
@@ -26,8 +27,10 @@ function AboutDoctor() {
         header_image: Photo,
     }]
 
-    return (<section className='about__single'>
-        {ali.map(serv => (<SectionHeaders data={serv}/>))}
+    return (
+        <section className='about__single'>
+        {ali.map(serv => (
+            <SectionHeaders data={serv}/>))}
         <Container>
             {data.data.map(doctor =>
                 <>

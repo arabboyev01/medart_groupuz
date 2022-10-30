@@ -4,9 +4,9 @@ import NewsCard from "../../UsableComponents/Cards/NewsCard/NewsCard";
 import {useTranslation} from "react-i18next";
 import Container from "../../UsableComponents/Container/Container";
 import Title from "../../UsableComponents/Title/Title";
-import './News.scss'
 import {useGetDataQuery} from "../../../redux";
 import Loader from "../../UsableComponents/Loader/Loader";
+import './News.scss'
 
 function News() {
     const {t} = useTranslation()

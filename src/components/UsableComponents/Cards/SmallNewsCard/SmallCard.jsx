@@ -1,8 +1,9 @@
-import React from 'react'
-import './SmallCard.scss'
+import {useContext} from "react";
+import {LanguageContext} from "../../../../context/langContext";
 import {NavLink} from "react-router-dom";
+import './SmallCard.scss'
 function SmallCard({data}) {
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     return (
     <NavLink to={`/news/${data.news_id}`} className='card'>

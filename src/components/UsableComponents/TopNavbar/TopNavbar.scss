@@ -97,13 +97,14 @@
 
           .lngBtn {
             cursor: pointer;
-            padding: 4px 3px;
+            padding: 5px;
             border: 2px solid $lightblue;
             background-color: $lightblue;
             opacity: .75;
             color: $light;
             font-size: 16px;
             border-radius: 20px;
+            text-transform: capitalize;
           }
         }
       }

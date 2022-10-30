@@ -114,5 +114,8 @@
   "servicehist": "Tarixiy jihatdan, dorilar an'anaviy dori vositalaridan faol moddalarni aniqlash yoki tasodifiy kashfiyot orqali kashf etilgan. Keyinchalik sintetik kichik molekulalarning kimyoviy kutubxonalari.",
   "servicehisttype": "Allergolog",
   "singleBlogPage": "Blogimiz haqida",
-  "singleBlogPageDescription" : "Bizning yagona blogimiz haqida"
+  "singleBlogPageDescription" : "Bizning yagona blogimiz haqida",
+  "testemonial1": "Sizning amaliyotingiz ajoyib. Siz taqdim etayotgan xizmatlar aql bovar qilmaydigan va siz taqdim etayotgan bemor tajribasi boshqa hech narsaga o'xshamaydi. Siz bularning haqiqat ekanligini bilasiz, lekin ular mahalliy, milliy yoki global miqyosda tanilganmi?",
+  "testemonial2" : "Medart bilan bo'lgan tajribam shunchalik ijobiy ediki, uni chin dildan tavsiya qilish oson. U menga eng yuqori darajada yordam berdi. Men uning katta tajribasi va mahoratiga qoyil qolaman.",
+  "testemonial4" : "O'tgan yozda qayta ta'mirlanganidan beri klinika ajoyib ko'rinishga ega. Barcha do'kto'rlar ajoyib, haqiqatan ham hamdard va tushunadigan shifokorlar."
 }

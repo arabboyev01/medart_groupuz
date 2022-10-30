@@ -9,10 +9,26 @@ import Container from "../../UsableComponents/Container/Container";
 import Title from "../../UsableComponents/Title/Title";
 import {ReactComponent as Tilda} from "../../../assets/icons/Tilda.svg";
 import {useTranslation} from "react-i18next";
-import {data} from "./data";
 
 function Testimonial() {
-    const {t} = useTranslation()
+    const {t} = useTranslation();
+    const data = [
+        {
+            id: 1,
+            title: t("testemonial1"),
+            author: "M. Boltaboyev",
+        },
+        {
+            id: 2,
+            title: t("testemonial2"),
+            author: "Y. Petrovna",
+        },
+        {
+            id: 3,
+            title:t("testemonial4"),
+            author: "M. Qodirova",
+        },
+    ];
     return (
           <section className="testimonial">
               <Container>

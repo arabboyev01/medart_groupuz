@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {
     Accordion,
     AccordionDetails,
@@ -8,8 +8,11 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import "./faq.scss";
+import {LanguageContext} from "../../../context/langContext";
 
 const Faq = ({data}) => {
+
+    const lang = useContext(LanguageContext);
     const [expanded, setExpanded] = useState(`panel${data[1].faq_id}`);
     const [expanded2, setExpanded2] = useState(`panel${data[8].faq_id}`);
     const handleChange = (panel) => (event, isExpanded) => {
@@ -37,10 +40,10 @@ const Faq = ({data}) => {
                                 aria-controls={`panel${acc.faq_id}bh-content`}
                                 id={`panel${acc.faq_id}bh-header`}
                             >
-                                <Typography>{acc.question_uz}</Typography>
+                                <Typography>{lang === "uz" ? acc.question_uz : acc.question_ru}</Typography>
                             </AccordionSummary>
                             <AccordionDetails className="accordDet">
-                                <Typography>{acc.answer_uz}</Typography>
+                                <Typography>{lang === "uz" ? acc.answer_uz : acc.answer_ru}</Typography>
                             </AccordionDetails>
                         </Accordion>
                     ))}
@@ -59,10 +62,10 @@ const Faq = ({data}) => {
                                 aria-controls={`panel${acc.faq_id}bh-content`}
                                 id={`panel${acc.faq_id}bh-header`}
                             >
-                                <Typography>{acc.question_uz}</Typography>
+                                <Typography>{lang === "uz" ? acc.question_uz : acc.question_ru}</Typography>
                             </AccordionSummary>
                             <AccordionDetails>
-                                <Typography>{acc.answer_uz}</Typography>
+                                <Typography>{lang === "uz" ? acc.answer_uz : acc.answer_ru}</Typography>
                             </AccordionDetails>
                         </Accordion>
                     ))}

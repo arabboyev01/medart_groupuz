@@ -9,7 +9,6 @@ import i18n from "i18next";
 import languageDetector from "i18next-browser-languagedetector";
 import {initReactI18next} from "react-i18next";
 import HttpApi from "i18next-http-backend";
-import axios from "axios"
 
 i18n
       .use(initReactI18next)
@@ -17,10 +16,10 @@ i18n
       .use(HttpApi)
       .init({
           fallbackLng: "ru",
-          supportedLngs: ["ru", "uz"],
+          supportedLengs: ["ru", "uz"],
           detection: {
               order: ["cookie", "htmlTag", "localStorage", "subdomain", "path"],
-              caches: ["localStorage"],
+              caches: ["cookie"],
           },
           backend: {
               loadPath: "/Locales/{{lng}}/translation.json",
@@ -28,21 +27,21 @@ i18n
           react: {useSuspen: false},
       });
 
-const backendOptions = {
-    loadPath: "",
-
-    request: async (options, url, payload, callback) => {
-        try {
-            const translation = await axios.get(url);
-            callback(null, {
-                status: 200,
-                data: JSON.stringify(translation.data),
-            });
-        } catch (e) {
-            callback(e);
-        }
-    },
-};
+// const backendOptions = {
+//     loadPath: "",
+//
+//     request: async (options, url, payload, callback) => {
+//         try {
+//             const translation = await axios.get(url);
+//             callback(null, {
+//                 status: 200,
+//                 data: JSON.stringify(translation.data),
+//             });
+//         } catch (e) {
+//             callback(e);
+//         }
+//     },
+// };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

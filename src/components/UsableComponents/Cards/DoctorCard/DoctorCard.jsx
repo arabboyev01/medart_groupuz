@@ -1,15 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {NavLink} from "react-router-dom";
-
 import './DoctorCard.scss'
+import {LanguageContext} from "../../../../context/langContext";
 
 function DoctorCard({data}) {
-    const lang = localStorage.getItem('i18nextLng')
     const input_ru = data.full_name_ru
     const [name_ru, surname_ru, lastname_ru] = input_ru.split(' ');
 
     const input_uz = data.full_name_uz
     const [name_uz, surname_uz, lastname_uz] = input_uz.split(' ');
+
+    const lang = useContext(LanguageContext);
 
     return (
         <NavLink to={`/doctors/${data.doctor_id}`} key={data.doctor_id} className='doctor__card'>
@@ -20,4 +21,4 @@ function DoctorCard({data}) {
     )
 }
 
-export default DoctorCard
+export default DoctorCard;

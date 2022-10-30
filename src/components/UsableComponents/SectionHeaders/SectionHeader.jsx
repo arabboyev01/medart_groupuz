@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './SectionHeader.scss'
+import {LanguageContext} from "../../../context/langContext";
 
 function SectionHeaders({data}) {
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     return (
         <header className='section__header'>

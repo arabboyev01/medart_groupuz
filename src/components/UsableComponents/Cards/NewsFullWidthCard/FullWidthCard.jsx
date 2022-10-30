@@ -1,9 +1,11 @@
-import React from "react";
-import "./FullWidth.scss";
+import React, {useContext} from 'react';
+import {LanguageContext} from "../../../../context/langContext";import "./FullWidth.scss";
 import { NavLink } from "react-router-dom";
 
 function FullWidth({ data }) {
-  const lang = localStorage.getItem("i18nextLng");
+  // const lang = localStorage.getItem("i18nextLng");
+
+  const lang = useContext(LanguageContext);
 
   return (
     <NavLink to={`/news/${data.news_id}`}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {NavLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {useGetDataQuery} from "../../../redux";
@@ -9,9 +9,10 @@ import {ReactComponent as Arrow} from "../../../assets/icons/BlueArrow.svg";
 import Container from "../../UsableComponents/Container/Container";
 import Title from "../../UsableComponents/Title/Title";
 import Loader from "../../UsableComponents/Loader/Loader";
+import {LanguageContext} from "../../../context/langContext";
 
 function Service({limit}) {
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
     const {t} = useTranslation();
     const {data = [], isLoading} = useGetDataQuery('our-service')
     if (isLoading) return <Loader/>

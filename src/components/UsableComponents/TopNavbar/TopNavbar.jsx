@@ -1,12 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import {LanguageContext} from "../../../context/langContext";
 import './TopNavbar.scss'
 import {useTranslation} from 'react-i18next';
 import i18next from "i18next";
 import {ReactComponent as Phone} from "../../../assets/icons/Phone.svg";
 import {ReactComponent as Clock} from "../../../assets/icons/Time.svg";
 import {ReactComponent as Geo} from "../../../assets/icons/Geo.svg";
-
-import {ReactComponent as In} from "../../../assets/icons/linkedin.svg";
 import {ReactComponent as Insta} from "../../../assets/icons/instagram.svg";
 import {ReactComponent as Face} from "../../../assets/icons/facebook.svg";
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -20,7 +19,6 @@ const social = [
 ];
 
 function TopNavbar() {
-    const [open,setOpen] = useState(false);
 
     const {t} = useTranslation();
 
@@ -29,11 +27,14 @@ function TopNavbar() {
     }, {id: 1, icon: <Clock/>, title: `${t('working')}`, url: null, text: `09:00 - 20:00 ${t('everyday')}`}, {
         id: 1, icon: <Geo />, title: `${t("location")}`, url: '/contact', text: 'Yuksalish ko’chasi 104, Fergana'
     }];
-    const language = [{
-        code: "uz", name: "UZ", country: "uz",
-    }, {
-        code: "ru", name: "RU", country: "ru",
-    }];
+    const language = useContext(LanguageContext);
+    const [languageButton, setLanguageButton] = useState(language === "uz" ? "ru" : "uz");
+
+    const handleLanguage = function(){
+        language === "uz" ? setLanguageButton("ru") : setLanguageButton("uz");
+        languageButton === "ru" ? i18next.changeLanguage('ru') : i18next.changeLanguage('uz');
+        window.location.reload();
+    }
 
 
     return (
@@ -56,13 +57,7 @@ function TopNavbar() {
                           </a>))}
                           <div className="language">
                               <div className="language__dropdown">
-                                  <span onClick={() => setOpen(open === true ? false : true)}>{!open ? <button className='lngBtn' onClick={() => {
-                                      i18next.changeLanguage('uz');
-                                      setOpen(false)
-                                  }}>UZ</button> : <button className='lngBtn' onClick={() => {
-                                      i18next.changeLanguage('ru');
-                                      setOpen(false)
-                                  }}>RU</button>}</span>
+                                  <button className='lngBtn' onClick={handleLanguage}>{languageButton}</button>
                               </div>
                           </div>
                       </div>

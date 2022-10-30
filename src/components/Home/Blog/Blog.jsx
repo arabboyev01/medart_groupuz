@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Blog.scss'
 import Container from "../../UsableComponents/Container/Container";
 import Title from "../../UsableComponents/Title/Title";

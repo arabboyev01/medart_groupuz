@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import LearnMoreBtn from "../../Buttons/LearnMore/LearnMore.btn";
 import './ServiceCard.scss'
 import {useTranslation} from "react-i18next";
+import {LanguageContext} from "../../../../context/langContext";
 
 function ServiceCard({data}) {
     const {t} = useTranslation()
 
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     return (
         <div data-aos="zoom-in" key={data.department_id} className='service__card'>

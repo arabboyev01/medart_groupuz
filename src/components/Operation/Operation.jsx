@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import SectionHeaders from "../UsableComponents/SectionHeaders/SectionHeader";
 import Container from "../UsableComponents/Container/Container";
 import './Operation.scss'
@@ -8,15 +8,16 @@ import ReactPlayer from 'react-player'
 import DoctorCard from "../UsableComponents/Cards/DoctorCard/DoctorCard";
 import Loader from "../UsableComponents/Loader/Loader";
 import {useTranslation} from "react-i18next";
+import {LanguageContext} from "../../context/langContext";
 
 
 function Operation() {
-    const {t} = useTranslation()
+    const {t} = useTranslation();
+    const lang = useContext(LanguageContext);
     const id = useParams()
     const {data = [], isLoading, isError} = useGetSingleQuery(`/operations/single/${id.id}`)
     if (isError) return <Loader/>
     if (isLoading) return <Loader/>
-    const lang = localStorage.getItem('i18nextLng')
 
     return (<section className='operation__wrapper'>
         {data.data.map(operation => (<>

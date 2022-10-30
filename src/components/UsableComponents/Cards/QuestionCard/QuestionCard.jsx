@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 
 import './Question.scss'
+import {LanguageContext} from "../../../../context/langContext";
 
 function QuestionCard({data}) {
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
     return (
           <div className='question__card'>
               <img data-aos="zoom-in" data-aos-duration="1000"  src={data.image} alt="" className='question__card-image'/>
@@ -17,4 +18,4 @@ function QuestionCard({data}) {
     )
 }
 
-export default QuestionCard
+export default QuestionCard;

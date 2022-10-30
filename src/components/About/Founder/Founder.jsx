@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 
 import './Founder.scss'
 import Container from "../../UsableComponents/Container/Container";
+import {LanguageContext} from "../../../context/langContext";
 
 function Founder({data}) {
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     return (<Container>
         <div key={data.doctor_id} className='absolute'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import photo from "../../assets/images/blogHeader.png";
 import SectionHeaders from "../UsableComponents/SectionHeaders/SectionHeader";
 import Container from "../UsableComponents/Container/Container";
@@ -9,13 +9,14 @@ import {useGetSingleQuery} from "../../redux";
 import {useTranslation} from "react-i18next";
 import ReactPlayer from "react-player";
 import Loader from "../UsableComponents/Loader/Loader";
+import {LanguageContext} from "../../context/langContext";
 
 
 function BlogSingle() {
     const {t} = useTranslation()
     const id = useParams()
     const {data = [], isLoading, isError} = useGetSingleQuery(`/blogs/single/${id.id}`)
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     const ali = [{
         id: 1,

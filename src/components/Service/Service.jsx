@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Photo from "../../assets/images/serviceImg.png";
 import SectionHeader from "../UsableComponents/SectionHeaders/SectionHeader";
 import Container from "../UsableComponents/Container/Container";
@@ -10,11 +10,12 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Loader from "../UsableComponents/Loader/Loader";
 import Services from '../Home/Service/Service.jsx'
+import {LanguageContext} from "../../context/langContext";
 
 function Service() {
     const id = useParams()
     const { t } = useTranslation()
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     const { data = [], isLoading, isError } = useGetSingleQuery(`/our-service/single/${id.id}`)
 

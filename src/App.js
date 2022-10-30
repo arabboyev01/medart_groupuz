@@ -23,7 +23,7 @@ import React from "react";
 import Loader from "./components/UsableComponents/Loader/Loader";
 import ScrollTop from "./components/UsableComponents/ScrollTop/Scroll";
 import PageNotFound from "./components/error/PageNotFound";
-
+import LangProvider from "./context/langProvider";
 function App() {
     const {isLoading} = useGetDataQuery('our-service')
     if (isLoading) {
@@ -32,6 +32,7 @@ function App() {
         return (
             <>
             <ScrollTop/>
+                <LangProvider>
             <TopNavbar/>
             <Navbar/>
             <Popup/>
@@ -51,6 +52,7 @@ function App() {
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
             <Footer/>
+                </LangProvider>
             </>
         );
     }

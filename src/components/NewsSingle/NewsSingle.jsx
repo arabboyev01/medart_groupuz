@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import photo from "../../assets/images/newsHeader.png";
 import SectionHeaders from "../UsableComponents/SectionHeaders/SectionHeader";
 import Container from "../UsableComponents/Container/Container";
@@ -8,11 +8,12 @@ import {useTranslation} from "react-i18next";
 import {useGetSingleQuery} from "../../redux";
 import {useParams} from "react-router-dom";
 import Loader from "../UsableComponents/Loader/Loader";
+import {LanguageContext} from "../../context/langContext";
 
 function NewsSingle() {
     const {t} = useTranslation()
     const id = useParams()
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     const {data = [], isLoading, isError} = useGetSingleQuery(`/news/single/${id.id}`)
     const ali = {

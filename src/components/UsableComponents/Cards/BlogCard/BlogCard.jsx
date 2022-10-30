@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import {LanguageContext} from "../../../../context/langContext"
 import './BlogCard.scss'
 import ReadMore from "../../Buttons/ReadMore/ReadMore.btn";
 import {useTranslation} from "react-i18next";
 
 function BlogCard({data}) {
     const {t} = useTranslation()
-    const lang = localStorage.getItem('i18nextLng')
+    const lang = useContext(LanguageContext);
 
     return (
         <div key={data.blog_id} className='blogcard'>
