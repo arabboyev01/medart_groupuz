@@ -35,18 +35,22 @@ function About() {
     if (isError) return <Loader/>
     if (isLoading) return <Loader/>
 
-    return (<section className='aboutMain'>
-        {data.result.map(about => (<div key={about.id}>
-            <SectionHeaders data={about}/>
-            <div className='wrapper'>
+    return (
+        <section className='aboutMain'>
+        {data.result.map(about =>
+            <div key={about.id}>
+             <SectionHeaders data={about}/>
+             <div className='wrapper'>
                 <Founder data={founder}/>
                 <Service/>
                 <Programs/>
                 <Question data={about}/>
                 <Faq data={about.aboutus_faqs} />
+             </div>
             </div>
-        </div>))}
-    </section>)
+        )}
+    </section>
+    )
 }
 
 export default About

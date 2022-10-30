@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import './TopNavbar.scss'
 import {useTranslation} from 'react-i18next';
-import LanguageIcon from '@mui/icons-material/Language';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import i18next from "i18next";
 import {ReactComponent as Phone} from "../../../assets/icons/Phone.svg";
 import {ReactComponent as Clock} from "../../../assets/icons/Time.svg";
@@ -11,12 +9,15 @@ import {ReactComponent as Geo} from "../../../assets/icons/Geo.svg";
 import {ReactComponent as In} from "../../../assets/icons/linkedin.svg";
 import {ReactComponent as Insta} from "../../../assets/icons/instagram.svg";
 import {ReactComponent as Face} from "../../../assets/icons/facebook.svg";
+import TelegramIcon from '@mui/icons-material/Telegram';
 import Container from "../Container/Container";
 
 
-const social = [{id: 1, icon: <In/>, url: 'http://google.com'}, {
-    id: 2, icon: <Insta/>, url: 'http://google.com'
-}, {id: 3, icon: <Face/>, url: 'http://google.com'}];
+const social = [
+    {id: 1, icon: <TelegramIcon style={{color: "white", fontSize: "20px", marginRight: "1px"}}/>, url: 'https://t.me/medartgroup_uz'},
+    { id: 2, icon: <Insta/>, url: 'https://www.instagram.com/medartgroup_uz/'},
+    {id: 3, icon: <Face/>, url: 'https://www.facebook.com/Medartgroupuz'}
+];
 
 function TopNavbar() {
     const [open,setOpen] = useState(false);
@@ -35,7 +36,8 @@ function TopNavbar() {
     }];
 
 
-    return (<nav className='top__navbar'>
+    return (
+        <nav className='top__navbar'>
               <Container>
                   <div className='wrapper'>
                       <div className='links'>
@@ -48,7 +50,8 @@ function TopNavbar() {
                           </div>))}
                       </div>
                       <div className='socials'>
-                          {social.map(soc => (<a href={soc.url} key={soc.id} className='social'>
+                          {social.map(soc => (
+                              <a href={soc.url} key={soc.id} className='social' target="_blank">
                               {soc.icon}
                           </a>))}
                           <div className="language">

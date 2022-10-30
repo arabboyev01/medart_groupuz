@@ -10,7 +10,6 @@
   @media (max-width: 425px) {
     padding: 10px 0;
   }
-
   .wrapper {
     position: relative;
     max-width: 1260px;
@@ -20,8 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
     .logo {
       transition: all 3s ease-in-out;
       max-width: 190px;
@@ -44,13 +41,11 @@
         }
       }
     }
-
     .sidebar2 {
       z-index: 100;
       display: flex;
       justify-content: center;
       align-items: center;
-
       aside {
         position: fixed;
         display: flex;

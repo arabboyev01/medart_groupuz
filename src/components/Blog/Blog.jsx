@@ -13,9 +13,9 @@ function Blog() {
     if (isLoading) return <Loader/>
     if (isError) return <Loader/>
 
-
-    return (<div className='blog'>
-        {data.result.map(item => (
+    return (
+        <div className='blog'>
+         {data.result.map(item =>
             <>
                 <SectionHeaders data={item}/>
                 <Container>
@@ -31,8 +31,9 @@ function Blog() {
                     </div>
                 </Container>
             </>
-        ))}
-    </div>)
+         )}
+        </div>
+    )
 }
 
 export default Blog

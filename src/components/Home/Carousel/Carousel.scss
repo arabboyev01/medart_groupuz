@@ -2,7 +2,7 @@
 
 .header {
   max-width: 100%;
-  min-width: 375px;
+  min-width: 345px;
   max-height: 900px;
   margin: 0 auto;
   .image {
@@ -14,6 +14,9 @@
       width: 540px;
       text-align: left;
       padding: 20% 0 10%;
+      @media(max-width: 430px){
+        max-width: 350px !important;
+      }
       .subtitle {
         font-size: calc(12px + 6 * (100vw / 1240));
         color: $light;

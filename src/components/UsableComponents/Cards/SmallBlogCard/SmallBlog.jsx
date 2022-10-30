@@ -3,8 +3,7 @@ import './SmallBlog.scss'
 import {NavLink} from "react-router-dom";
 
 function SmallBlog({data}) {
-    const lang = localStorage.getItem('i18nextLng')
-
+    const lang = localStorage.getItem('i18nextLng');
     return (
         <NavLink to={`/blog/${data.blog_id}`} className='smallblog'>
             <div className='smallblog__header'>
@@ -21,4 +20,4 @@ function SmallBlog({data}) {
     )
 }
 
-export default SmallBlog
+export default SmallBlog;

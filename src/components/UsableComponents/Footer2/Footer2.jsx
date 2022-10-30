@@ -1,22 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-
 import "./footer2.scss";
 import SvgMedArt from "../../../assets/icons/Logo.svg";
-
-import SvgIn from "../../../assets/icons/linkedin.svg";
-import Svgfacebook from "../../../assets/icons/facebook.svg";
-import SvgInsta from "../../../assets/icons/instagram.svg";
+import Svgfacebook, {ReactComponent as Face} from "../../../assets/icons/facebook.svg";
+import SvgInsta, {ReactComponent as Insta} from "../../../assets/icons/instagram.svg";
 import Container from "../Container/Container";
-
+import TelegramIcon from "@mui/icons-material/Telegram";
+import {Link} from "react-router-dom"
 const Footer2 = () => {
   const { t } = useTranslation();
 
   const selectFooter = [
-    { id: 1, title: `${t("appoinment")}` },
-    { id: 2, title: `${t("doctors")}` },
-    { id: 3, title: `${t("services")}` },
-    { id: 4, title: `${t("aboutUs")}` },
+    { id: 1, title: `${t("home")}`, link: "/" },
+    { id: 2, title: `${t("doctors")}`, link: "/doctors" },
+    { id: 3, title: `${t("services")}`, link: "/services" },
+    { id: 4, title: `${t("aboutUs")}`, link: "/about" },
   ];
 
   const informationFooter = [
@@ -35,10 +33,10 @@ const Footer2 = () => {
     { id: 3, title: `${t("addres")}:`, url: "Yuksalish ko’chasi 104, Fergana, Uzbekistan" },
   ];
 
-  const soacialMedia = [
-    { id: 1, img: SvgIn, url: "https://ru.linkedin.com" },
-    { id: 2, img: Svgfacebook, url: " https://www.facebook.com" },
-    { id: 3, img: SvgInsta, url: "https://www.instagram.com" },
+  const social = [
+    {id: 1, icon: <TelegramIcon style={{color: "white", fontSize: "20px", marginRight: "1px"}}/>, url: 'https://t.me/medartgroup_uz'},
+    { id: 2, icon: <Insta/>, url: 'https://www.instagram.com/medartgroup_uz/'},
+    {id: 3, icon: <Face/>, url: 'https://www.facebook.com/Medartgroupuz'}
   ];
 
   return (
@@ -49,44 +47,41 @@ const Footer2 = () => {
             <img src={SvgMedArt} className="logoMedArt" />
             <p className="titleMedArt">{t("footertext")}</p>
           </div>
-
           <div className="Box2">
             <p className="importantTitle">{t("importantPage")}</p>
-
             <ul className="titleUl">
-              {selectFooter.map((type) => (
-                <li key={type.id} className="selectMed">
-                  {type.title}
-                </li>
-              ))}
+              {selectFooter.map((type) =>
+                  <Link to={type.link}>
+                   <li key={type.id} className="selectMed">
+                     {type.title}
+                   </li>
+                  </Link>
+              )}
             </ul>
           </div>
-
           <div className="Box3">
             <p className="contactTitle">{t("contacts")}</p>
 
-            {informationFooter.map((type) => (
+            {informationFooter.map((type) =>
               <p key={type.id} className="infoMed">
                 {type.title}{" "}
                 <a className="typeUrl" href={type.type}>
                   {type.url}
                 </a>
               </p>
-            ))}
+            )}
           </div>
-
           <div className="topFooter">
             <p className="titleBy">
               © 2022 Medart-group all Rights Reserved by IT_LEAD Developers
               Company
             </p>
-
             <div className="linksMed">
-              {soacialMedia.map((type) => (
-                <a href={type.url} target="_blank" className="icon__wrapper">
-                  <img src={type.img} alt="" className="LinkDiv" />
-                </a>
-              ))}
+              {social.map(soc =>
+                  <a href={soc.url} key={soc.id} className='icon__wrapper' target="_blank">
+                    {soc.icon}
+                  </a>
+              )}
             </div>
           </div>
         </div>

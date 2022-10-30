@@ -7,10 +7,11 @@
   text-align: center;
   &-image{
     max-width: 400px;
-    max-height: 250px;
+    height: 250px;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 35px;
+    object-fit: cover;
   }
   &-title{
     font-size: 32px;

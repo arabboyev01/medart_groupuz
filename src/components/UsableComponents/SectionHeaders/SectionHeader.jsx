@@ -15,4 +15,4 @@ function SectionHeaders({data}) {
     )
 }
 
-export default SectionHeaders
+export default SectionHeaders;

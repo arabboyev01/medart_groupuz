@@ -16,9 +16,11 @@ function Service({limit}) {
     const {data = [], isLoading} = useGetDataQuery('our-service')
     if (isLoading) return <Loader/>
 
-    return (<section className='service'>
+    return (
+        <section className='service'>
         <Container>
-            {data.result.map(serv => (<div className='wrapper'>
+            {data.result.map(serv =>
+                <div className='wrapper'>
                 {limit > 3 ? <Title children={t('service')} url={'/services'}/> : <h1 className='another'>{t('servicesanother')}</h1>}
                 <div className='services'>
                     {serv.our_service_departments.slice(0, limit).map(ser => (
@@ -29,12 +31,16 @@ function Service({limit}) {
                             <p data-aos="zoom-out" data-aos-duration="1000"
                                className='descr'>{lang === 'uz' ? ser.description_uz : ser.description_ru}</p>
                             <NavLink data-aos="zoom-out" data-aos-duration="1000" className='link'
-                                     to={`/service/${ser.department_id}`}>{t('urltext')}<Arrow/></NavLink>
-                        </div>))}
+                                     to={`/service/${ser.department_id}`}>{t('urltext')}<Arrow/>
+                            </NavLink>
+                        </div>
+                    ))}
                 </div>
-            </div>))}
+            </div>
+            )}
         </Container>
-    </section>)
+    </section>
+    )
 
 }
 

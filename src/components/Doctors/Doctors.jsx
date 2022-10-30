@@ -22,7 +22,7 @@ function Doctors() {
                 <Container>
                     <div className='docs__wrapper'>
                         <>
-                            {doc.doctor_infos.map(info => (<DoctorCard data={info}/>))}
+                            {doc.doctor_infos.map(info => <DoctorCard data={info}/>)}
                         </>
                     </div>
                     <Client/>

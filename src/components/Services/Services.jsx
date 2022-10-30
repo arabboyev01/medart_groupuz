@@ -27,11 +27,13 @@ function Services() {
     if (isLoading) return <Loader/>
 
     return (<section className='service__main'>
-        {data.result.map(service => (<>
+        {data.result.map(service => <>
             <SectionHeader data={service}/>
             <Container>
                 <div className='items__wrapper'>
-                    {service.our_service_departments.map(serv => (<ServiceCard data={serv}/>))}
+                    {service.our_service_departments.map(serv =>
+                        <ServiceCard data={serv}/>
+                    )}
                 </div>
                 <div key={info.id} className='info__wrapper'>
                     <img data-aos="zoom-in" data-aos-duration="4000" src={Image} alt=""
@@ -47,7 +49,7 @@ function Services() {
                 </div>
                 <Faq data={service.our_service_faqs}/>
             </Container>
-        </>))}
+        </>)}
     </section>)
 }
 

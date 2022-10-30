@@ -1,0 +1,9 @@
+.pageNotFound{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .notFoundText {
+    text-align: center;
+    margin: 40vh 0;
+  }
+}

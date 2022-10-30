@@ -22,13 +22,15 @@ import {useGetDataQuery} from "./redux";
 import React from "react";
 import Loader from "./components/UsableComponents/Loader/Loader";
 import ScrollTop from "./components/UsableComponents/ScrollTop/Scroll";
+import PageNotFound from "./components/error/PageNotFound";
 
 function App() {
     const {isLoading} = useGetDataQuery('our-service')
     if (isLoading) {
         return (<Loader/>)
     } else {
-        return (<>
+        return (
+            <>
             <ScrollTop/>
             <TopNavbar/>
             <Navbar/>
@@ -46,9 +48,11 @@ function App() {
                 <Route path='/doctors' element={<Doctors/>}/>
                 <Route path='/service/:id' element={<Service/>}/>
                 <Route path='/services' element={<Services/>}/>
+                <Route path='*' element={<PageNotFound />} />
             </Routes>
             <Footer/>
-        </>);
+            </>
+        );
     }
 }
 

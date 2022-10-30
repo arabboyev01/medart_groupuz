@@ -20,4 +20,4 @@ function BigBlog({data}) {
     </NavLink>)
 }
 
-export default BigBlog
+export default BigBlog;

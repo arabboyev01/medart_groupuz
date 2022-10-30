@@ -8,7 +8,8 @@ import Testimonial from "./Testimonial/Testimonial";
 import Carousel1 from "./Carousel/Carousel";
 
 function Home() {
-    return (<>
+    return (
+        <div style={{overflowX: "hidden"}}>
         <Carousel1/>
         <Service limit={6}/>
         <About/>
@@ -16,7 +17,7 @@ function Home() {
         <News/>
         <Blog/>
         <Testimonial/>
-    </>)
+    </div>)
 }
 
 export default Home

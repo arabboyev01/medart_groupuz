@@ -10,12 +10,14 @@
   box-shadow: $shadow;
   min-width: 375px;
   background-color: $light;
-
   .wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: 430px){
+      max-width: 350px !important;
+    }
 
     .links {
       display: flex;

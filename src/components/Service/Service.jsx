@@ -54,9 +54,10 @@ function Service() {
         header_image: Photo
     }]
 
-    return (<section className='service__single'>
-        {ali.map(serv => (<SectionHeader data={serv} />))}
-        <Container>
+    return (
+        <section className='service__single'>
+         {ali.map(serv => <SectionHeader data={serv} />)}
+         <Container>
             <div className='service__single-wrapper'>
                 <div key={data.data[0].department_id} className='service__single-info'>
                     <h1 className='service__title'>{lang === 'uz' ? data.data[0].name_uz : data.data[0].name_ru}</h1>
@@ -82,8 +83,9 @@ function Service() {
                 </div>
             </div>
             <Services limit={3} />
-        </Container>
-    </section>)
+            </Container>
+        </section>
+    )
 }
 
 export default Service;
